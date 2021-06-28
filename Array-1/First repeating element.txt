@@ -1,0 +1,17 @@
+int firstRepeated(int arr[], int n) {
+        //code here
+        set<int> map;
+        int min = -1;
+        for(int i = n-1;i>=0;i--){
+            if(map.find(arr[i]) != map.end()){
+                min = i;
+            }
+            else {
+                map.insert(arr[i]);
+            }
+        }
+        if(min != -1){
+            return min+1;
+        }
+        return -1;
+    }

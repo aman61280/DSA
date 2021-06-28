@@ -1,0 +1,20 @@
+int majorityWins(int arr[], int n, int x, int y) {
+ 
+    // code here
+    int count1=0,count2=0;
+    for(int i = 0;i<n;i++){
+        if(arr[i] == x){
+            count1++;
+        }
+        if(arr[i] == y){
+           count2++; 
+        } 
+    }
+    if(count1 == count2){
+        return x>y?y:x;
+    }
+    
+    return count1>count2?x:y;
+
+    
+}

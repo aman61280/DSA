@@ -1,0 +1,14 @@
+int immediateSmaller(int arr[], int n, int x)
+    {
+        // your code here
+        int min = 0;
+        for(int i = 0;i<n;i++){
+            if(arr[i]<x && arr[i]>min){
+                min = arr[i];
+            }
+        }
+        if(min == 0){
+            return -1;
+        }
+        return min;
+    }
